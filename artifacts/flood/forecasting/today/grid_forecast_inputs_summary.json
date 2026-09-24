@@ -1,0 +1,25 @@
+{
+  "rows": 20088,
+  "grid_cells": 837,
+  "forecast_hours": 24,
+  "forecast_start": "2026-08-31T04:00:00+00:00",
+  "forecast_end": "2026-09-01T03:00:00+00:00",
+  "direct_grid_rows": 2232,
+  "imputed_grid_rows": 17856,
+  "unique_support_sensors": 93,
+  "rows_by_model": {
+    "logistic": 14136,
+    "gcn": 5952
+  },
+  "unique_support_sensors_by_model": {
+    "gcn": 45,
+    "logistic": 48
+  },
+  "model_features": [
+    "precip_current_hour_mm",
+    "precip_previous_6h_mm",
+    "daily_total_precip_mm"
+  ],
+  "weather_contract": "precipitation belongs to target grid; model identity belongs to support sensor",
+  "training_contract": "grid forecast inputs are operational only and are never used as synthetic retraining observations"
+}

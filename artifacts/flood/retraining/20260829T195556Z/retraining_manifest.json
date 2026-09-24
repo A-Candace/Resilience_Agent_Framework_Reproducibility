@@ -1,0 +1,120 @@
+{
+  "cycle_id": "20260829T195556Z",
+  "data_contract": {
+    "forward_canonical": "append-only",
+    "historical_canonical": "immutable",
+    "operational_imputed_grids_added_to_training": false,
+    "operational_model_identity": "support sensor",
+    "operational_rainfall": "target-grid-local",
+    "training_observations": "real physical FloodNet sensors"
+  },
+  "failed_stage": "forward_response_refresh",
+  "final_outputs": {
+    "cluster_primary_sensor_registry": {
+      "exists": true,
+      "modified_at_utc": "2026-08-25T11:15:09.997601+00:00",
+      "path": "artifacts\\flood\\spatial\\cluster_primary_sensor_registry.parquet",
+      "size_bytes": 28566
+    },
+    "eligible_sensor_grid_cluster_map": {
+      "exists": true,
+      "modified_at_utc": "2026-08-25T11:15:09.984905+00:00",
+      "path": "artifacts\\flood\\spatial\\eligible_sensor_grid_cluster_map.parquet",
+      "size_bytes": 44799
+    },
+    "eligible_sensor_registry": {
+      "exists": true,
+      "modified_at_utc": "2026-08-22T12:07:01.717451+00:00",
+      "path": "artifacts\\flood\\model_selection\\eligible_sensor_model_registry.csv",
+      "size_bytes": 29356
+    },
+    "eligible_sensor_registry_with_coordinates": {
+      "exists": true,
+      "modified_at_utc": "2026-08-22T16:49:09.662781+00:00",
+      "path": "artifacts\\flood\\model_selection\\eligible_sensor_model_registry_with_coordinates.parquet",
+      "size_bytes": 30878
+    },
+    "gcn_model": {
+      "exists": true,
+      "modified_at_utc": "2026-08-17T00:01:09.321955+00:00",
+      "path": "artifacts\\flood\\gcn\\duration_response_gcn_precipitation_only.pt",
+      "size_bytes": 18770
+    },
+    "gcn_test_predictions": {
+      "exists": true,
+      "modified_at_utc": "2026-08-17T00:01:09.820556+00:00",
+      "path": "artifacts\\flood\\gcn\\test_predictions.parquet",
+      "size_bytes": 5675401
+    },
+    "grid_imputation_reference": {
+      "exists": true,
+      "modified_at_utc": "2026-08-25T11:20:14.655435+00:00",
+      "path": "artifacts\\flood\\spatial\\grid_imputation_reference.parquet",
+      "size_bytes": 40538
+    },
+    "grid_primary_sensor_registry": {
+      "exists": true,
+      "modified_at_utc": "2026-08-25T11:15:09.992083+00:00",
+      "path": "artifacts\\flood\\spatial\\grid_primary_sensor_registry.parquet",
+      "size_bytes": 41605
+    },
+    "logistic_model": {
+      "exists": true,
+      "modified_at_utc": "2026-08-22T11:19:32.924417+00:00",
+      "path": "artifacts\\flood\\logistic\\precipitation_only_logistic.pkl",
+      "size_bytes": 696
+    },
+    "logistic_test_predictions": {
+      "exists": true,
+      "modified_at_utc": "2026-08-22T11:19:33.903657+00:00",
+      "path": "artifacts\\flood\\logistic\\test_predictions.parquet",
+      "size_bytes": 4505187
+    },
+    "sensor_model_selection": {
+      "exists": true,
+      "modified_at_utc": "2026-08-22T12:07:01.707635+00:00",
+      "path": "artifacts\\flood\\model_selection\\sensor_model_selection.csv",
+      "size_bytes": 141390
+    },
+    "spatial_governance_summary": {
+      "exists": true,
+      "modified_at_utc": "2026-08-29T19:28:31.970045+00:00",
+      "path": "artifacts\\flood\\spatial\\mlflow_audit\\spatial_governance_summary.json",
+      "size_bytes": 1996
+    }
+  },
+  "finished_at_utc": "2026-08-29T19:55:59.457381+00:00",
+  "git": {
+    "branch": "feature/flood-mlflow-pipeline",
+    "commit": "022f9967a1cd1426ef7202aa95b2c02596555283",
+    "status_porcelain": "M agentic/orchestrator/bedrock.py\n M agentic/orchestrator/service.py\n M docker-compose.yml\n M src/resilience_app/agents/forecasting_agent/mcp_server.py\n M src/resilience_app/agents/forecasting_agent/page.py\n M src/resilience_app/agents/forecasting_agent/service.py\n M src/resilience_app/agents/forecasting_agent/tools.py\n?? data/processed/\n?? data/raw/\n?? mlops/flood/experiments/\n?? mlops/flood/forecasting/\n?? mlops/flood/pipeline/\n?? mlops/flood/spatial/\n?? mlops/flood/training/select_sensor_models_mlflow.py\n?? mlops/flood/training/train_logistic_mlflow.py"
+  },
+  "mlflow_tracking_uri": "http://localhost:5000",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "python_executable": "C:\\Users\\cagon\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+  "run_directory": "artifacts\\flood\\retraining\\20260829T195556Z",
+  "stages": [
+    {
+      "arguments": [],
+      "command": [
+        "C:\\Users\\cagon\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-m",
+        "mlops.flood.training.build_forward_response"
+      ],
+      "description": "Refresh append-only forward FloodNet hourly responses.",
+      "duration_seconds": 2.390187,
+      "expected_outputs": [],
+      "finished_at_utc": "2026-08-29T19:55:59.452992+00:00",
+      "log_path": "artifacts\\flood\\retraining\\20260829T195556Z\\logs\\01_forward_response_refresh.log",
+      "missing_outputs": [],
+      "module": "mlops.flood.training.build_forward_response",
+      "name": "forward_response_refresh",
+      "return_code": 1,
+      "started_at_utc": "2026-08-29T19:55:57.062805+00:00",
+      "status": "failed"
+    }
+  ],
+  "started_at_utc": "2026-08-29T19:55:56.905621+00:00",
+  "status": "failed",
+  "working_directory": "C:\\Users\\cagon\\OneDrive\\Desktop\\nyc-resilience-agent-owned-v2"
+}

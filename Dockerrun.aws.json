@@ -1,0 +1,12 @@
+{
+  "AWSEBDockerrunVersion": "1",
+  "Image": {
+    "Name": "682033467946.dkr.ecr.us-east-1.amazonaws.com/nyc-resilience@sha256:fffcf28fd70af1b9e36496fea56b1ea711a5ab16b696a2cc3b089ab6af783a8d",
+    "Update": "true"
+  },
+  "Ports": [
+    {
+      "ContainerPort": "8080"
+    }
+  ]
+}

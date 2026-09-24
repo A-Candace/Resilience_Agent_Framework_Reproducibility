@@ -1,0 +1,36 @@
+{
+  "n_grid_cells": 837,
+  "n_clusters": 5,
+  "random_state": 42,
+  "n_init": 10,
+  "features": [
+    "Slope_mean",
+    "Elevation_Mean",
+    "Mean IFLD_RISKS",
+    "Summarized Area in SQUAREFEET",
+    "Count of Polygons"
+  ],
+  "excluded_redundant_feature": "Sum Shape_Area",
+  "missing_value_strategy": "column mean before standardization",
+  "missing_counts": {
+    "Slope_mean": 8,
+    "Elevation_Mean": 1,
+    "Mean IFLD_RISKS": 1,
+    "Summarized Area in SQUAREFEET": 0,
+    "Count of Polygons": 11
+  },
+  "imputation_means": {
+    "Slope_mean": 3.067352389626054,
+    "Elevation_Mean": 52.53909605023926,
+    "Mean IFLD_RISKS": 13.893318447368435,
+    "Summarized Area in SQUAREFEET": 2023722.7553783893,
+    "Count of Polygons": 1319.0133171912832
+  },
+  "cluster_counts": {
+    "1": 65,
+    "2": 173,
+    "3": 271,
+    "4": 76,
+    "5": 252
+  }
+}

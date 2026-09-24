@@ -1,0 +1,14 @@
+metric,value
+n_rows,1893774.0
+actual_events,48430.0
+predicted_events,273398.0
+true_positive,12260.0
+false_positive,261138.0
+true_negative,1584206.0
+false_negative,36170.0
+accuracy,0.8430076661734716
+precision,0.04484304932735426
+recall,0.2531488746644642
+f1,0.07618976596194241
+roc_auc,0.750229807639256
+average_precision,0.0505777937052868

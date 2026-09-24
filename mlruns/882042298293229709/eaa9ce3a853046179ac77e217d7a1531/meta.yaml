@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/882042298293229709/eaa9ce3a853046179ac77e217d7a1531/artifacts
+end_time: 1786924342881
+entry_point_name: ''
+experiment_id: '882042298293229709'
+lifecycle_stage: active
+run_id: eaa9ce3a853046179ac77e217d7a1531
+run_name: precipitation-only-gcn
+run_uuid: eaa9ce3a853046179ac77e217d7a1531
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1786923855471
+status: 4
+tags: []
+user_id: cagon

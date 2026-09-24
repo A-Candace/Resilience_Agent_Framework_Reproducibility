@@ -1,0 +1,284 @@
+services:
+  app:
+    build:
+      context: ../..
+      dockerfile: Dockerfile
+    environment:
+      ENV: production
+      AWS_REGION: ${AWS_REGION}
+      AWS_DEFAULT_REGION: ${AWS_DEFAULT_REGION}
+      BEDROCK_MODEL_ID: ${BEDROCK_MODEL_ID}
+
+      DATA_S3_BUCKET: ${DATA_S3_BUCKET}
+      S3_BUCKET: ${S3_BUCKET}
+
+      S3_CENSUS_TRACTS_PREFIX: ${S3_CENSUS_TRACTS_PREFIX}
+      S3_RISK_XLSX_KEY: ${S3_RISK_XLSX_KEY}
+      S3_FLOOD_GRID_KEY: ${S3_FLOOD_GRID_KEY}
+      S3_FORECAST_PREFIX: ${S3_FORECAST_PREFIX}
+      S3_GRID_IMPUTATION_GEOJSON_KEY: ${S3_GRID_IMPUTATION_GEOJSON_KEY}
+
+      DATA_RUNTIME_DIR: /app/data/runtime
+      LOCAL_CENSUS_TRACTS: /app/data/runtime/nyc_census_tracts.shp
+      RISK_XLSX: /app/data/runtime/Risk_Attributes_Table_v4.xlsx
+      FLOOD_GRID_PATH: /app/data/runtime/nyc_flood_risk_grid_4km.geojson
+
+      GRID_FLOOD_FORECAST_ROOT: /app/artifacts/flood/forecasting
+      GRID_SPATIAL_ROOT: /app/artifacts/flood/spatial
+      GRID_IMPUTATION_GEOJSON_PATH: /app/artifacts/flood/spatial/grid_imputation_reference.geojson
+
+      MLFLOW_TRACKING_URI: http://mlflow:5000
+      MLFLOW_EXPERIMENT: ${MLFLOW_EXPERIMENT}
+
+      DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
+
+      PHOENIX_COLLECTOR_ENDPOINT: http://phoenix:4317
+      OTEL_SERVICE_NAME: nyc-resilience-app
+
+      ORCHESTRATOR_URL: http://orchestrator:8090
+
+      RELOAD_API_TOKEN: ${RELOAD_API_TOKEN}
+
+    ports:
+      - "8080:8080"
+
+    volumes:
+      - model-cache:/app/model_cache
+      - forecast-data:/app/artifacts/flood/forecasting
+      - spatial-data:/app/artifacts/flood/spatial
+
+    depends_on:
+      postgres:
+        condition: service_healthy
+      orchestrator:
+        condition: service_started
+
+    restart: unless-stopped
+
+
+  orchestrator:
+    build:
+      context: ../..
+      dockerfile: Dockerfile
+
+    command:
+      uvicorn agentic.orchestrator.api:app
+      --host 0.0.0.0
+      --port 8090
+
+    environment:
+      ENV: production
+      AWS_REGION: ${AWS_REGION}
+      AWS_DEFAULT_REGION: ${AWS_DEFAULT_REGION}
+      BEDROCK_MODEL_ID: ${BEDROCK_MODEL_ID}
+
+      DATA_S3_BUCKET: ${DATA_S3_BUCKET}
+      S3_BUCKET: ${S3_BUCKET}
+
+      DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
+
+      PHOENIX_COLLECTOR_ENDPOINT: http://phoenix:4317
+      OTEL_SERVICE_NAME: nyc-resilience-orchestrator
+
+      MCP_GEOSPATIAL_URL: http://mcp-geospatial:8001/mcp
+      MCP_CALCULATORS_URL: http://mcp-calculators:8002/mcp
+      MCP_DATA_URL: http://mcp-data:8003/mcp
+      MCP_MODEL_URL: http://mcp-model:8004/mcp
+      MCP_FORECASTING_URL: http://mcp-forecasting:8012/mcp
+
+      MLFLOW_TRACKING_URI: http://mlflow:5000
+
+    depends_on:
+      postgres:
+        condition: service_healthy
+      phoenix:
+        condition: service_started
+      mlflow:
+        condition: service_healthy
+      mcp-geospatial:
+        condition: service_started
+      mcp-calculators:
+        condition: service_started
+      mcp-data:
+        condition: service_started
+      mcp-model:
+        condition: service_started
+      mcp-forecasting:
+        condition: service_started
+
+    restart: unless-stopped
+
+
+  mcp-geospatial:
+    build:
+      context: ../..
+      dockerfile: Dockerfile
+
+    command:
+      python -m agentic.mcp_servers.geospatial
+
+    environment:
+      ENV: production
+      AWS_REGION: ${AWS_REGION}
+
+    restart: unless-stopped
+
+
+  mcp-calculators:
+    build:
+      context: ../..
+      dockerfile: Dockerfile
+
+    command:
+      python -m agentic.mcp_servers.calculators
+
+    environment:
+      ENV: production
+
+    restart: unless-stopped
+
+
+  mcp-data:
+    build:
+      context: ../..
+      dockerfile: Dockerfile
+
+    command:
+      python -m agentic.mcp_servers.data_access
+
+    environment:
+      ENV: production
+      DATA_S3_BUCKET: ${DATA_S3_BUCKET}
+      AWS_REGION: ${AWS_REGION}
+
+    restart: unless-stopped
+
+
+  mcp-model:
+    build:
+      context: ../..
+      dockerfile: Dockerfile
+
+    command:
+      python -m agentic.mcp_servers.model_ops
+
+    environment:
+      ENV: production
+      AWS_REGION: ${AWS_REGION}
+      MLFLOW_TRACKING_URI: http://mlflow:5000
+
+    volumes:
+      - model-cache:/app/model_cache
+
+    depends_on:
+      mlflow:
+        condition: service_healthy
+
+    restart: unless-stopped
+
+
+  mcp-forecasting:
+    build:
+      context: ../..
+      dockerfile: Dockerfile
+
+    command:
+      python -m resilience_app.agents.forecasting_agent.mcp_server
+
+    environment:
+      ENV: production
+      AWS_REGION: ${AWS_REGION}
+      GRID_FLOOD_FORECAST_ROOT: /app/artifacts/flood/forecasting
+      GRID_SPATIAL_ROOT: /app/artifacts/flood/spatial
+      MLFLOW_TRACKING_URI: http://mlflow:5000
+
+    volumes:
+      - forecast-data:/app/artifacts/flood/forecasting
+      - spatial-data:/app/artifacts/flood/spatial
+
+    depends_on:
+      mlflow:
+        condition: service_healthy
+
+    restart: unless-stopped
+
+
+  mlflow:
+    build:
+      context: ../..
+      dockerfile: Dockerfile
+
+    command:
+      - mlflow
+      - server
+      - --backend-store-uri
+      - sqlite:////mlflow/db/mlflow.db
+      - --host
+      - 0.0.0.0
+      - --port
+      - "5000"
+      - --artifacts-destination
+      - /mlflow/artifacts
+      - --allowed-hosts
+      - localhost:*
+      - --allowed-hosts
+      - mlflow:5000
+
+    volumes:
+      - mlflow-db:/mlflow/db
+      - mlflow-artifacts:/mlflow/artifacts
+
+    healthcheck:
+      test:
+        - CMD
+        - curl
+        - -f
+        - http://localhost:5000/health
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 20s
+
+    restart: unless-stopped
+
+
+  postgres:
+    image: postgres:16-alpine
+
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
+    restart: unless-stopped
+
+
+  phoenix:
+    image: arizephoenix/phoenix:latest
+
+    volumes:
+      - phoenix-data:/mnt/data
+
+    restart: unless-stopped
+
+
+volumes:
+  model-cache:
+  forecast-data:
+  spatial-data:
+  postgres-data:
+  phoenix-data:
+  mlflow-db:
+  mlflow-artifacts:

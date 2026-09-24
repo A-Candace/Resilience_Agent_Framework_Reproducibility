@@ -1,0 +1,539 @@
+{
+  "created_at": "2026-08-15T15:17:57.023431+00:00",
+  "partitions": {
+    "2020-10": {
+      "end_time": "2020-11-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2020/month=10/part.parquet",
+      "start_time": "2020-10-14T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:47:26.362059+00:00"
+    },
+    "2020-11": {
+      "end_time": "2020-12-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2020/month=11/part.parquet",
+      "start_time": "2020-11-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:47:28.027576+00:00"
+    },
+    "2020-12": {
+      "end_time": "2021-01-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2020/month=12/part.parquet",
+      "start_time": "2020-12-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:47:29.830976+00:00"
+    },
+    "2021-01": {
+      "end_time": "2021-02-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2021/month=01/part.parquet",
+      "start_time": "2021-01-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:47:31.561190+00:00"
+    },
+    "2021-02": {
+      "end_time": "2021-03-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2021/month=02/part.parquet",
+      "start_time": "2021-02-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:47:33.436732+00:00"
+    },
+    "2021-03": {
+      "end_time": "2021-04-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2021/month=03/part.parquet",
+      "start_time": "2021-03-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:47:35.360669+00:00"
+    },
+    "2021-04": {
+      "end_time": "2021-05-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2021/month=04/part.parquet",
+      "start_time": "2021-04-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:47:37.193129+00:00"
+    },
+    "2021-05": {
+      "end_time": "2021-06-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2021/month=05/part.parquet",
+      "start_time": "2021-05-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:47:38.922375+00:00"
+    },
+    "2021-06": {
+      "end_time": "2021-07-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2021/month=06/part.parquet",
+      "start_time": "2021-06-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:47:40.727080+00:00"
+    },
+    "2021-07": {
+      "end_time": "2021-08-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2021/month=07/part.parquet",
+      "start_time": "2021-07-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:47:42.694145+00:00"
+    },
+    "2021-08": {
+      "end_time": "2021-09-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2021/month=08/part.parquet",
+      "start_time": "2021-08-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:47:44.356154+00:00"
+    },
+    "2021-09": {
+      "end_time": "2021-10-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2021/month=09/part.parquet",
+      "start_time": "2021-09-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:47:45.946536+00:00"
+    },
+    "2021-10": {
+      "end_time": "2021-11-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2021/month=10/part.parquet",
+      "start_time": "2021-10-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:47:47.706182+00:00"
+    },
+    "2021-11": {
+      "end_time": "2021-12-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2021/month=11/part.parquet",
+      "start_time": "2021-11-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:47:49.551015+00:00"
+    },
+    "2021-12": {
+      "end_time": "2022-01-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2021/month=12/part.parquet",
+      "start_time": "2021-12-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:47:51.288427+00:00"
+    },
+    "2022-01": {
+      "end_time": "2022-02-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2022/month=01/part.parquet",
+      "start_time": "2022-01-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:47:53.192896+00:00"
+    },
+    "2022-02": {
+      "end_time": "2022-03-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2022/month=02/part.parquet",
+      "start_time": "2022-02-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:47:54.830387+00:00"
+    },
+    "2022-03": {
+      "end_time": "2022-04-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2022/month=03/part.parquet",
+      "start_time": "2022-03-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:47:56.671177+00:00"
+    },
+    "2022-04": {
+      "end_time": "2022-05-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2022/month=04/part.parquet",
+      "start_time": "2022-04-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:47:58.384775+00:00"
+    },
+    "2022-05": {
+      "end_time": "2022-06-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2022/month=05/part.parquet",
+      "start_time": "2022-05-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:48:00.343008+00:00"
+    },
+    "2022-06": {
+      "end_time": "2022-07-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2022/month=06/part.parquet",
+      "start_time": "2022-06-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:48:02.088992+00:00"
+    },
+    "2022-07": {
+      "end_time": "2022-08-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2022/month=07/part.parquet",
+      "start_time": "2022-07-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:48:04.090857+00:00"
+    },
+    "2022-08": {
+      "end_time": "2022-09-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2022/month=08/part.parquet",
+      "start_time": "2022-08-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:48:05.816697+00:00"
+    },
+    "2022-09": {
+      "end_time": "2022-10-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2022/month=09/part.parquet",
+      "start_time": "2022-09-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:48:07.792543+00:00"
+    },
+    "2022-10": {
+      "end_time": "2022-11-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2022/month=10/part.parquet",
+      "start_time": "2022-10-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:48:09.636206+00:00"
+    },
+    "2022-11": {
+      "end_time": "2022-12-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2022/month=11/part.parquet",
+      "start_time": "2022-11-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:48:11.386599+00:00"
+    },
+    "2022-12": {
+      "end_time": "2023-01-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2022/month=12/part.parquet",
+      "start_time": "2022-12-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:48:13.369235+00:00"
+    },
+    "2023-01": {
+      "end_time": "2023-02-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2023/month=01/part.parquet",
+      "start_time": "2023-01-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:48:15.164720+00:00"
+    },
+    "2023-02": {
+      "end_time": "2023-03-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2023/month=02/part.parquet",
+      "start_time": "2023-02-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:48:16.982032+00:00"
+    },
+    "2023-03": {
+      "end_time": "2023-04-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2023/month=03/part.parquet",
+      "start_time": "2023-03-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:48:18.653374+00:00"
+    },
+    "2023-04": {
+      "end_time": "2023-05-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2023/month=04/part.parquet",
+      "start_time": "2023-04-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:48:20.373651+00:00"
+    },
+    "2023-05": {
+      "end_time": "2023-06-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2023/month=05/part.parquet",
+      "start_time": "2023-05-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:48:22.427173+00:00"
+    },
+    "2023-06": {
+      "end_time": "2023-07-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2023/month=06/part.parquet",
+      "start_time": "2023-06-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:48:24.180940+00:00"
+    },
+    "2023-07": {
+      "end_time": "2023-08-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2023/month=07/part.parquet",
+      "start_time": "2023-07-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:48:25.686565+00:00"
+    },
+    "2023-08": {
+      "end_time": "2023-09-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2023/month=08/part.parquet",
+      "start_time": "2023-08-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:48:27.407895+00:00"
+    },
+    "2023-09": {
+      "end_time": "2023-10-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2023/month=09/part.parquet",
+      "start_time": "2023-09-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:48:29.163699+00:00"
+    },
+    "2023-10": {
+      "end_time": "2023-11-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2023/month=10/part.parquet",
+      "start_time": "2023-10-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:48:30.904282+00:00"
+    },
+    "2023-11": {
+      "end_time": "2023-12-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2023/month=11/part.parquet",
+      "start_time": "2023-11-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:48:32.534329+00:00"
+    },
+    "2023-12": {
+      "end_time": "2024-01-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2023/month=12/part.parquet",
+      "start_time": "2023-12-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:48:34.223246+00:00"
+    },
+    "2024-01": {
+      "end_time": "2024-02-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2024/month=01/part.parquet",
+      "start_time": "2024-01-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:48:36.064045+00:00"
+    },
+    "2024-02": {
+      "end_time": "2024-03-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2024/month=02/part.parquet",
+      "start_time": "2024-02-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:48:37.790570+00:00"
+    },
+    "2024-03": {
+      "end_time": "2024-04-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2024/month=03/part.parquet",
+      "start_time": "2024-03-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:48:39.761535+00:00"
+    },
+    "2024-04": {
+      "end_time": "2024-05-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2024/month=04/part.parquet",
+      "start_time": "2024-04-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:48:41.403236+00:00"
+    },
+    "2024-05": {
+      "end_time": "2024-06-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2024/month=05/part.parquet",
+      "start_time": "2024-05-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:48:43.331121+00:00"
+    },
+    "2024-06": {
+      "end_time": "2024-07-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2024/month=06/part.parquet",
+      "start_time": "2024-06-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:48:45.084732+00:00"
+    },
+    "2024-07": {
+      "end_time": "2024-08-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2024/month=07/part.parquet",
+      "start_time": "2024-07-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:48:46.689953+00:00"
+    },
+    "2024-08": {
+      "end_time": "2024-09-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2024/month=08/part.parquet",
+      "start_time": "2024-08-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:48:48.522671+00:00"
+    },
+    "2024-09": {
+      "end_time": "2024-10-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2024/month=09/part.parquet",
+      "start_time": "2024-09-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:48:50.103681+00:00"
+    },
+    "2024-10": {
+      "end_time": "2024-11-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2024/month=10/part.parquet",
+      "start_time": "2024-10-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:48:51.903817+00:00"
+    },
+    "2024-11": {
+      "end_time": "2024-12-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2024/month=11/part.parquet",
+      "start_time": "2024-11-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:48:53.489313+00:00"
+    },
+    "2024-12": {
+      "end_time": "2025-01-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2024/month=12/part.parquet",
+      "start_time": "2024-12-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:48:55.365916+00:00"
+    },
+    "2025-01": {
+      "end_time": "2025-02-01T00:00:00+00:00",
+      "s3_key": "mlops/flood/processed/canonical/year=2025/month=01/part.parquet",
+      "start_time": "2025-01-01T00:00:00+00:00",
+      "status": "skipped",
+      "updated_at": "2026-08-15T15:48:56.999405+00:00"
+    },
+    "2025-02": {
+      "end_time": "2025-03-01T00:00:00+00:00",
+      "missing_response_rows": 0,
+      "observed_response_rows": 107724,
+      "positive_duration_rows": 6577,
+      "rows": 116844,
+      "s3_key": "mlops/flood/processed/canonical/year=2025/month=02/part.parquet",
+      "sensors": 201,
+      "start_time": "2025-02-01T00:00:00+00:00",
+      "status": "completed",
+      "updated_at": "2026-08-15T15:49:51.423524+00:00"
+    },
+    "2025-03": {
+      "end_time": "2025-04-01T00:00:00+00:00",
+      "missing_response_rows": 0,
+      "observed_response_rows": 133705,
+      "positive_duration_rows": 1997,
+      "rows": 140518,
+      "s3_key": "mlops/flood/processed/canonical/year=2025/month=03/part.parquet",
+      "sensors": 217,
+      "start_time": "2025-03-01T00:00:00+00:00",
+      "status": "completed",
+      "updated_at": "2026-08-15T15:50:46.555839+00:00"
+    },
+    "2025-04": {
+      "end_time": "2025-05-01T00:00:00+00:00",
+      "missing_response_rows": 0,
+      "observed_response_rows": 129138,
+      "positive_duration_rows": 1211,
+      "rows": 134740,
+      "s3_key": "mlops/flood/processed/canonical/year=2025/month=04/part.parquet",
+      "sensors": 213,
+      "start_time": "2025-04-01T00:00:00+00:00",
+      "status": "completed",
+      "updated_at": "2026-08-15T15:51:40.912565+00:00"
+    },
+    "2025-05": {
+      "end_time": "2025-06-01T00:00:00+00:00",
+      "missing_response_rows": 0,
+      "observed_response_rows": 134424,
+      "positive_duration_rows": 1981,
+      "rows": 141530,
+      "s3_key": "mlops/flood/processed/canonical/year=2025/month=05/part.parquet",
+      "sensors": 228,
+      "start_time": "2025-05-01T00:00:00+00:00",
+      "status": "completed",
+      "updated_at": "2026-08-15T15:52:38.391871+00:00"
+    },
+    "2025-06": {
+      "end_time": "2025-07-01T00:00:00+00:00",
+      "missing_response_rows": 0,
+      "observed_response_rows": 133024,
+      "positive_duration_rows": 2137,
+      "rows": 140434,
+      "s3_key": "mlops/flood/processed/canonical/year=2025/month=06/part.parquet",
+      "sensors": 220,
+      "start_time": "2025-06-01T00:00:00+00:00",
+      "status": "completed",
+      "updated_at": "2026-08-15T15:53:33.493348+00:00"
+    },
+    "2025-07": {
+      "end_time": "2025-08-01T00:00:00+00:00",
+      "missing_response_rows": 0,
+      "observed_response_rows": 143468,
+      "positive_duration_rows": 3017,
+      "rows": 151440,
+      "s3_key": "mlops/flood/processed/canonical/year=2025/month=07/part.parquet",
+      "sensors": 229,
+      "start_time": "2025-07-01T00:00:00+00:00",
+      "status": "completed",
+      "updated_at": "2026-08-15T15:54:27.694106+00:00"
+    },
+    "2025-08": {
+      "end_time": "2025-09-01T00:00:00+00:00",
+      "missing_response_rows": 0,
+      "observed_response_rows": 138997,
+      "positive_duration_rows": 2906,
+      "rows": 149830,
+      "s3_key": "mlops/flood/processed/canonical/year=2025/month=08/part.parquet",
+      "sensors": 239,
+      "start_time": "2025-08-01T00:00:00+00:00",
+      "status": "completed",
+      "updated_at": "2026-08-15T15:55:21.639464+00:00"
+    },
+    "2025-09": {
+      "end_time": "2025-10-01T00:00:00+00:00",
+      "missing_response_rows": 0,
+      "observed_response_rows": 148797,
+      "positive_duration_rows": 3013,
+      "rows": 160970,
+      "s3_key": "mlops/flood/processed/canonical/year=2025/month=09/part.parquet",
+      "sensors": 273,
+      "start_time": "2025-09-01T00:00:00+00:00",
+      "status": "completed",
+      "updated_at": "2026-08-15T15:56:15.955802+00:00"
+    },
+    "2025-10": {
+      "end_time": "2025-11-01T00:00:00+00:00",
+      "missing_response_rows": 0,
+      "observed_response_rows": 188785,
+      "positive_duration_rows": 2565,
+      "rows": 200929,
+      "s3_key": "mlops/flood/processed/canonical/year=2025/month=10/part.parquet",
+      "sensors": 303,
+      "start_time": "2025-10-01T00:00:00+00:00",
+      "status": "completed",
+      "updated_at": "2026-08-15T15:57:10.545322+00:00"
+    },
+    "2025-11": {
+      "end_time": "2025-12-01T00:00:00+00:00",
+      "missing_response_rows": 0,
+      "observed_response_rows": 195069,
+      "positive_duration_rows": 2372,
+      "rows": 208723,
+      "s3_key": "mlops/flood/processed/canonical/year=2025/month=11/part.parquet",
+      "sensors": 311,
+      "start_time": "2025-11-01T00:00:00+00:00",
+      "status": "completed",
+      "updated_at": "2026-08-15T15:58:05.767504+00:00"
+    },
+    "2025-12": {
+      "end_time": "2026-01-01T00:00:00+00:00",
+      "missing_response_rows": 0,
+      "observed_response_rows": 184783,
+      "positive_duration_rows": 11312,
+      "rows": 206805,
+      "s3_key": "mlops/flood/processed/canonical/year=2025/month=12/part.parquet",
+      "sensors": 302,
+      "start_time": "2025-12-01T00:00:00+00:00",
+      "status": "completed",
+      "updated_at": "2026-08-15T15:59:00.420125+00:00"
+    },
+    "2026-01": {
+      "end_time": "2026-02-01T00:00:00+00:00",
+      "missing_response_rows": 0,
+      "observed_response_rows": 172480,
+      "positive_duration_rows": 29131,
+      "rows": 196829,
+      "s3_key": "mlops/flood/processed/canonical/year=2026/month=01/part.parquet",
+      "sensors": 289,
+      "start_time": "2026-01-01T00:00:00+00:00",
+      "status": "completed",
+      "updated_at": "2026-08-15T15:59:54.139921+00:00"
+    },
+    "2026-02": {
+      "end_time": "2026-03-01T00:00:00+00:00",
+      "missing_response_rows": 0,
+      "observed_response_rows": 126651,
+      "positive_duration_rows": 82385,
+      "rows": 168812,
+      "s3_key": "mlops/flood/processed/canonical/year=2026/month=02/part.parquet",
+      "sensors": 272,
+      "start_time": "2026-02-01T00:00:00+00:00",
+      "status": "completed",
+      "updated_at": "2026-08-15T16:00:47.726507+00:00"
+    },
+    "2026-03": {
+      "end_time": "2026-03-14T00:00:00+00:00",
+      "missing_response_rows": 0,
+      "observed_response_rows": 72097,
+      "positive_duration_rows": 5995,
+      "rows": 80343,
+      "s3_key": "mlops/flood/processed/canonical/year=2026/month=03/part.parquet",
+      "sensors": 295,
+      "start_time": "2026-03-01T00:00:00+00:00",
+      "status": "completed",
+      "updated_at": "2026-08-15T16:01:39.528489+00:00"
+    }
+  },
+  "schema_version": 1,
+  "updated_at": "2026-08-15T16:01:39.528489+00:00"
+}

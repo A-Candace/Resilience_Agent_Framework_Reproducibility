@@ -1,0 +1,356 @@
+----------------------------------------
+/var/log/nginx/error.log
+----------------------------------------
+2026/09/16 14:04:08 [warn] 4415#4415: could not build optimal types_hash, you should increase either types_hash_max_size: 1024 or types_hash_bucket_size: 64; ignoring types_hash_bucket_size
+2026/09/16 14:04:08 [warn] 4473#4473: could not build optimal types_hash, you should increase either types_hash_max_size: 1024 or types_hash_bucket_size: 64; ignoring types_hash_bucket_size
+2026/09/16 14:04:08 [warn] 4474#4474: could not build optimal types_hash, you should increase either types_hash_max_size: 1024 or types_hash_bucket_size: 64; ignoring types_hash_bucket_size
+2026/09/20 09:06:45 [error] 4477#4477: *47439 client intended to send too large body: 10485761 bytes, client: 172.31.82.249, server: , request: "POST / HTTP/1.1", host: "52.3.67.79"
+2026/09/20 09:06:46 [error] 4477#4477: *47441 client intended to send too large body: 10485760 bytes, client: 172.31.82.249, server: , request: "POST / HTTP/1.1", host: "52.3.67.79"
+2026/09/23 22:17:24 [warn] 404739#404739: could not build optimal types_hash, you should increase either types_hash_max_size: 1024 or types_hash_bucket_size: 64; ignoring types_hash_bucket_size
+2026/09/23 22:17:24 [warn] 404797#404797: could not build optimal types_hash, you should increase either types_hash_max_size: 1024 or types_hash_bucket_size: 64; ignoring types_hash_bucket_size
+2026/09/23 22:17:24 [warn] 404798#404798: could not build optimal types_hash, you should increase either types_hash_max_size: 1024 or types_hash_bucket_size: 64; ignoring types_hash_bucket_size
+2026/09/23 22:22:19 [warn] 406283#406283: could not build optimal types_hash, you should increase either types_hash_max_size: 1024 or types_hash_bucket_size: 64; ignoring types_hash_bucket_size
+2026/09/23 22:22:20 [warn] 406341#406341: could not build optimal types_hash, you should increase either types_hash_max_size: 1024 or types_hash_bucket_size: 64; ignoring types_hash_bucket_size
+2026/09/23 22:22:20 [warn] 406342#406342: could not build optimal types_hash, you should increase either types_hash_max_size: 1024 or types_hash_bucket_size: 64; ignoring types_hash_bucket_size
+
+
+----------------------------------------
+/var/log/docker-events.log
+----------------------------------------
+2026-09-16T14:02:47.003523956Z container prune  (reclaimed=0)
+2026-09-16T14:02:49.686106956Z image pull python:3.11-slim (name=python)
+2026-09-16T14:03:55.446860246Z image tag sha256:23cf627801adb3c847a6a3c192212bb7e78b5dbff1f188363cbe451ab33a5120 (name=aws_beanstalk/staging-app)
+2026-09-16T14:04:02.802138006Z container create 52c873f6ef521dd6e435524e50f576a65346d07d00c110fb0c5a50f95ae3158f (image=23cf627801ad, name=optimistic_albattani)
+2026-09-16T14:04:02.824354778Z network connect f37fb778b489438c382336f76e6e5aa34d3e84126fba384827ef798a58ce1587 (container=52c873f6ef521dd6e435524e50f576a65346d07d00c110fb0c5a50f95ae3158f, name=bridge, type=bridge)
+2026-09-16T14:04:03.226205431Z container start 52c873f6ef521dd6e435524e50f576a65346d07d00c110fb0c5a50f95ae3158f (image=23cf627801ad, name=optimistic_albattani)
+2026-09-16T14:04:09.060898563Z image tag sha256:23cf627801adb3c847a6a3c192212bb7e78b5dbff1f188363cbe451ab33a5120 (name=aws_beanstalk/current-app:latest)
+2026-09-16T14:04:09.073929498Z image untag sha256:23cf627801adb3c847a6a3c192212bb7e78b5dbff1f188363cbe451ab33a5120 (name=sha256:23cf627801adb3c847a6a3c192212bb7e78b5dbff1f188363cbe451ab33a5120)
+2026-09-16T14:04:10.071998439Z image untag sha256:b8fe4ce3655e95f7f22c2a87d8e03a2f1f0cedc488a8e9adf18cc5a18cfdf401 (name=sha256:b8fe4ce3655e95f7f22c2a87d8e03a2f1f0cedc488a8e9adf18cc5a18cfdf401)
+2026-09-16T14:04:10.073343741Z image untag sha256:b8fe4ce3655e95f7f22c2a87d8e03a2f1f0cedc488a8e9adf18cc5a18cfdf401 (name=sha256:b8fe4ce3655e95f7f22c2a87d8e03a2f1f0cedc488a8e9adf18cc5a18cfdf401)
+2026-09-16T14:04:10.076155201Z image delete sha256:b8fe4ce3655e95f7f22c2a87d8e03a2f1f0cedc488a8e9adf18cc5a18cfdf401 (name=sha256:b8fe4ce3655e95f7f22c2a87d8e03a2f1f0cedc488a8e9adf18cc5a18cfdf401)
+2026-09-23T22:15:59.502722778Z container prune  (reclaimed=0)
+2026-09-23T22:16:02.183781281Z image pull python:3.11-slim (name=python)
+2026-09-23T22:17:03.641745836Z image tag sha256:737adad82b30a8626db7d5568d38cd013af39f47a2efda572db44366c507fc47 (name=aws_beanstalk/staging-app)
+2026-09-23T22:17:07.392425776Z container kill 52c873f6ef521dd6e435524e50f576a65346d07d00c110fb0c5a50f95ae3158f (image=23cf627801ad, name=optimistic_albattani, signal=15)
+2026-09-23T22:17:17.402072538Z container kill 52c873f6ef521dd6e435524e50f576a65346d07d00c110fb0c5a50f95ae3158f (image=23cf627801ad, name=optimistic_albattani, signal=9)
+2026-09-23T22:17:17.863094409Z network disconnect f37fb778b489438c382336f76e6e5aa34d3e84126fba384827ef798a58ce1587 (container=52c873f6ef521dd6e435524e50f576a65346d07d00c110fb0c5a50f95ae3158f, name=bridge, type=bridge)
+2026-09-23T22:17:17.872746238Z container stop 52c873f6ef521dd6e435524e50f576a65346d07d00c110fb0c5a50f95ae3158f (image=23cf627801ad, name=optimistic_albattani)
+2026-09-23T22:17:17.875049758Z container die 52c873f6ef521dd6e435524e50f576a65346d07d00c110fb0c5a50f95ae3158f (execDuration=634394, exitCode=137, image=23cf627801ad, name=optimistic_albattani)
+2026-09-23T22:17:18.716278727Z container destroy 52c873f6ef521dd6e435524e50f576a65346d07d00c110fb0c5a50f95ae3158f (image=23cf627801ad, name=optimistic_albattani)
+2026-09-23T22:17:18.716304207Z container prune  (reclaimed=770142)
+2026-09-23T22:17:18.738323189Z image untag sha256:23cf627801adb3c847a6a3c192212bb7e78b5dbff1f188363cbe451ab33a5120 (name=sha256:23cf627801adb3c847a6a3c192212bb7e78b5dbff1f188363cbe451ab33a5120)
+2026-09-23T22:17:18.739090135Z image delete sha256:23cf627801adb3c847a6a3c192212bb7e78b5dbff1f188363cbe451ab33a5120 (name=sha256:23cf627801adb3c847a6a3c192212bb7e78b5dbff1f188363cbe451ab33a5120)
+2026-09-23T22:17:18.877073211Z container create f0a9e7571789ef78ea7d430b615184605aa254fda94d827cc458f676a2d81797 (image=737adad82b30, name=upbeat_ardinghelli)
+2026-09-23T22:17:18.898380524Z network connect f37fb778b489438c382336f76e6e5aa34d3e84126fba384827ef798a58ce1587 (container=f0a9e7571789ef78ea7d430b615184605aa254fda94d827cc458f676a2d81797, name=bridge, type=bridge)
+2026-09-23T22:17:19.212073072Z container start f0a9e7571789ef78ea7d430b615184605aa254fda94d827cc458f676a2d81797 (image=737adad82b30, name=upbeat_ardinghelli)
+2026-09-23T22:17:24.836014840Z image tag sha256:737adad82b30a8626db7d5568d38cd013af39f47a2efda572db44366c507fc47 (name=aws_beanstalk/current-app:latest)
+2026-09-23T22:17:24.847059437Z image untag sha256:737adad82b30a8626db7d5568d38cd013af39f47a2efda572db44366c507fc47 (name=sha256:737adad82b30a8626db7d5568d38cd013af39f47a2efda572db44366c507fc47)
+2026-09-23T22:17:25.793144035Z image untag sha256:274d131132dbdc6058ed77088525d77adaf0749a6d99f2cf7d42feb9a10737c8 (name=sha256:274d131132dbdc6058ed77088525d77adaf0749a6d99f2cf7d42feb9a10737c8)
+2026-09-23T22:17:25.794112267Z image untag sha256:274d131132dbdc6058ed77088525d77adaf0749a6d99f2cf7d42feb9a10737c8 (name=sha256:274d131132dbdc6058ed77088525d77adaf0749a6d99f2cf7d42feb9a10737c8)
+2026-09-23T22:17:25.795753537Z image delete sha256:274d131132dbdc6058ed77088525d77adaf0749a6d99f2cf7d42feb9a10737c8 (name=sha256:274d131132dbdc6058ed77088525d77adaf0749a6d99f2cf7d42feb9a10737c8)
+2026-09-23T22:19:04.240215891Z container prune  (reclaimed=0)
+2026-09-23T22:21:57.570493669Z container prune  (reclaimed=0)
+2026-09-23T22:21:58.560376351Z image pull python:3.11-slim (name=python)
+2026-09-23T22:21:59.094044868Z image tag sha256:737adad82b30a8626db7d5568d38cd013af39f47a2efda572db44366c507fc47 (name=aws_beanstalk/staging-app)
+2026-09-23T22:22:02.986118994Z container kill f0a9e7571789ef78ea7d430b615184605aa254fda94d827cc458f676a2d81797 (image=737adad82b30, name=upbeat_ardinghelli, signal=15)
+2026-09-23T22:22:12.995520228Z container kill f0a9e7571789ef78ea7d430b615184605aa254fda94d827cc458f676a2d81797 (image=737adad82b30, name=upbeat_ardinghelli, signal=9)
+2026-09-23T22:22:13.323443145Z network disconnect f37fb778b489438c382336f76e6e5aa34d3e84126fba384827ef798a58ce1587 (container=f0a9e7571789ef78ea7d430b615184605aa254fda94d827cc458f676a2d81797, name=bridge, type=bridge)
+2026-09-23T22:22:13.326800100Z container stop f0a9e7571789ef78ea7d430b615184605aa254fda94d827cc458f676a2d81797 (image=737adad82b30, name=upbeat_ardinghelli)
+2026-09-23T22:22:13.329211537Z container die f0a9e7571789ef78ea7d430b615184605aa254fda94d827cc458f676a2d81797 (execDuration=293, exitCode=137, image=737adad82b30, name=upbeat_ardinghelli)
+2026-09-23T22:22:14.142313914Z container destroy f0a9e7571789ef78ea7d430b615184605aa254fda94d827cc458f676a2d81797 (image=737adad82b30, name=upbeat_ardinghelli)
+2026-09-23T22:22:14.142333670Z container prune  (reclaimed=94162)
+2026-09-23T22:22:14.164807772Z image untag sha256:737adad82b30a8626db7d5568d38cd013af39f47a2efda572db44366c507fc47 (name=sha256:737adad82b30a8626db7d5568d38cd013af39f47a2efda572db44366c507fc47)
+2026-09-23T22:22:14.252569643Z container create cbbc57d5a7822763bac9b5fc827fde0ecac0839afbb7ecfc18ce51afe3843c97 (image=737adad82b30, name=suspicious_lalande)
+2026-09-23T22:22:14.272066245Z network connect f37fb778b489438c382336f76e6e5aa34d3e84126fba384827ef798a58ce1587 (container=cbbc57d5a7822763bac9b5fc827fde0ecac0839afbb7ecfc18ce51afe3843c97, name=bridge, type=bridge)
+2026-09-23T22:22:14.592206535Z container start cbbc57d5a7822763bac9b5fc827fde0ecac0839afbb7ecfc18ce51afe3843c97 (image=737adad82b30, name=suspicious_lalande)
+2026-09-23T22:22:20.243026863Z image tag sha256:737adad82b30a8626db7d5568d38cd013af39f47a2efda572db44366c507fc47 (name=aws_beanstalk/current-app:latest)
+2026-09-23T22:22:20.253287797Z image untag sha256:737adad82b30a8626db7d5568d38cd013af39f47a2efda572db44366c507fc47 (name=sha256:737adad82b30a8626db7d5568d38cd013af39f47a2efda572db44366c507fc47)
+2026-09-23T22:22:21.237543388Z image untag sha256:274d131132dbdc6058ed77088525d77adaf0749a6d99f2cf7d42feb9a10737c8 (name=sha256:274d131132dbdc6058ed77088525d77adaf0749a6d99f2cf7d42feb9a10737c8)
+2026-09-23T22:22:21.238648029Z image untag sha256:274d131132dbdc6058ed77088525d77adaf0749a6d99f2cf7d42feb9a10737c8 (name=sha256:274d131132dbdc6058ed77088525d77adaf0749a6d99f2cf7d42feb9a10737c8)
+2026-09-23T22:22:21.240131160Z image delete sha256:274d131132dbdc6058ed77088525d77adaf0749a6d99f2cf7d42feb9a10737c8 (name=sha256:274d131132dbdc6058ed77088525d77adaf0749a6d99f2cf7d42feb9a10737c8)
+
+
+----------------------------------------
+/var/log/eb-docker-process.log
+----------------------------------------
+2026/09/16 14:04:09.506554 [INFO] Loading Manifest...
+2026/09/16 14:04:09.511982 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-1:682033467946:stack/awseb-e-rqms9bmxmn-immutable-stack/358cc920-b1d7-11f1-a36b-12c9c8673d0d -r AWSEBAutoScalingGroup --region us-east-1
+2026/09/16 14:04:09.662828 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-1:682033467946:stack/awseb-e-rqms9bmxmn-immutable-stack/358cc920-b1d7-11f1-a36b-12c9c8673d0d -r AWSEBBeanstalkMetadata --region us-east-1
+2026/09/16 14:04:09.803273 [INFO] Checking if docker is running...
+2026/09/16 14:04:09.803325 [INFO] Fetch current app container id...
+2026/09/16 14:04:09.803348 [INFO] Running command: docker ps | grep 52c873f6ef52
+2026/09/16 14:04:09.815810 [INFO] 52c873f6ef52   23cf627801ad   "/bin/sh -c 'streaml…"   7 seconds ago   Up 6 seconds   8080/tcp   optimistic_albattani
+
+2026/09/16 14:04:09.815837 [INFO] Running command: docker wait  52c873f6ef52
+2026/09/23 22:17:17.874460 [INFO] 137
+
+2026/09/23 22:17:25.275725 [INFO] Loading Manifest...
+2026/09/23 22:17:25.286708 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-1:682033467946:stack/awseb-e-rqms9bmxmn-stack/7a349920-de76-11f0-8e6b-0affffaf7789 -r AWSEBAutoScalingGroup --region us-east-1
+2026/09/23 22:17:25.452091 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-1:682033467946:stack/awseb-e-rqms9bmxmn-stack/7a349920-de76-11f0-8e6b-0affffaf7789 -r AWSEBBeanstalkMetadata --region us-east-1
+2026/09/23 22:17:25.603386 [INFO] Checking if docker is running...
+2026/09/23 22:17:25.603444 [INFO] Fetch current app container id...
+2026/09/23 22:17:25.603465 [INFO] Running command: docker ps | grep f0a9e7571789
+2026/09/23 22:17:25.615827 [INFO] f0a9e7571789   737adad82b30   "/bin/sh -c 'streaml…"   7 seconds ago   Up 6 seconds   8080/tcp   upbeat_ardinghelli
+
+2026/09/23 22:17:25.615851 [INFO] Running command: docker wait  f0a9e7571789
+2026/09/23 22:22:13.328634 [INFO] 137
+
+2026/09/23 22:22:20.716456 [INFO] Loading Manifest...
+2026/09/23 22:22:20.721572 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-1:682033467946:stack/awseb-e-rqms9bmxmn-stack/7a349920-de76-11f0-8e6b-0affffaf7789 -r AWSEBAutoScalingGroup --region us-east-1
+2026/09/23 22:22:20.890534 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-1:682033467946:stack/awseb-e-rqms9bmxmn-stack/7a349920-de76-11f0-8e6b-0affffaf7789 -r AWSEBBeanstalkMetadata --region us-east-1
+2026/09/23 22:22:21.042031 [INFO] Checking if docker is running...
+2026/09/23 22:22:21.042089 [INFO] Fetch current app container id...
+2026/09/23 22:22:21.042108 [INFO] Running command: docker ps | grep cbbc57d5a782
+2026/09/23 22:22:21.055126 [INFO] cbbc57d5a782   737adad82b30   "/bin/sh -c 'streaml…"   7 seconds ago   Up 6 seconds   8080/tcp   suspicious_lalande
+
+2026/09/23 22:22:21.055152 [INFO] Running command: docker wait  cbbc57d5a782
+
+
+----------------------------------------
+/var/log/docker
+----------------------------------------
+Sep 16 14:02:44 ip-172-31-95-72 docker[2203]: time="2026-09-16T14:02:44.616239186Z" level=info msg="Starting up"
+Sep 16 14:02:44 ip-172-31-95-72 docker[2203]: time="2026-09-16T14:02:44.961182155Z" level=info msg="Loading containers: start."
+Sep 16 14:02:45 ip-172-31-95-72 docker[2203]: time="2026-09-16T14:02:45.782344334Z" level=info msg="Loading containers: done."
+Sep 16 14:02:45 ip-172-31-95-72 docker[2203]: time="2026-09-16T14:02:45.839540556Z" level=info msg="Docker daemon" commit=6fdf0a6 containerd-snapshotter=false storage-driver=overlay2 version=25.0.16
+Sep 16 14:02:45 ip-172-31-95-72 docker[2203]: time="2026-09-16T14:02:45.839659279Z" level=info msg="Daemon has completed initialization"
+Sep 16 14:02:45 ip-172-31-95-72 docker[2203]: time="2026-09-16T14:02:45.874794948Z" level=info msg="API listen on /run/docker.sock"
+Sep 16 14:02:47 ip-172-31-95-72 docker[2203]: 2026/09/16 14:02:47 http: superfluous response.WriteHeader call from go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp.(*respWriterWrapper).WriteHeader (wrap.go:98)
+Sep 16 14:04:10 ip-172-31-95-72 docker[2203]: 2026/09/16 14:04:10 http: superfluous response.WriteHeader call from go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp.(*respWriterWrapper).WriteHeader (wrap.go:98)
+Sep 16 14:04:10 ip-172-31-95-72 docker[2203]: 2026/09/16 14:04:10 http: superfluous response.WriteHeader call from go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp.(*respWriterWrapper).WriteHeader (wrap.go:98)
+Sep 16 14:04:10 ip-172-31-95-72 docker[2203]: 2026/09/16 14:04:10 http2: server: error reading preface from client @: read unix /run/docker.sock->@: read: connection reset by peer
+Sep 23 22:17:17 ip-172-31-95-72 docker[2203]: time="2026-09-23T22:17:17.393233715Z" level=info msg="Container failed to exit within 10s of signal 15 - using the force" container=52c873f6ef521dd6e435524e50f576a65346d07d00c110fb0c5a50f95ae3158f
+Sep 23 22:17:17 ip-172-31-95-72 docker[2203]: time="2026-09-23T22:17:17.523247747Z" level=info msg="ignoring event" container=52c873f6ef521dd6e435524e50f576a65346d07d00c110fb0c5a50f95ae3158f module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Sep 23 22:17:25 ip-172-31-95-72 docker[2203]: 2026/09/23 22:17:25 http: superfluous response.WriteHeader call from go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp.(*respWriterWrapper).WriteHeader (wrap.go:98)
+Sep 23 22:17:25 ip-172-31-95-72 docker[2203]: 2026/09/23 22:17:25 http: superfluous response.WriteHeader call from go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp.(*respWriterWrapper).WriteHeader (wrap.go:98)
+Sep 23 22:21:58 ip-172-31-95-72 docker[2203]: 2026/09/23 22:21:58 http2: server: error reading preface from client @: read unix /run/docker.sock->@: read: connection reset by peer
+Sep 23 22:22:12 ip-172-31-95-72 docker[2203]: time="2026-09-23T22:22:12.987054497Z" level=info msg="Container failed to exit within 10s of signal 15 - using the force" container=f0a9e7571789ef78ea7d430b615184605aa254fda94d827cc458f676a2d81797
+Sep 23 22:22:13 ip-172-31-95-72 docker[2203]: time="2026-09-23T22:22:13.043320601Z" level=info msg="ignoring event" container=f0a9e7571789ef78ea7d430b615184605aa254fda94d827cc458f676a2d81797 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Sep 23 22:22:21 ip-172-31-95-72 docker[2203]: 2026/09/23 22:22:21 http: superfluous response.WriteHeader call from go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp.(*respWriterWrapper).WriteHeader (wrap.go:98)
+Sep 23 22:22:21 ip-172-31-95-72 docker[2203]: 2026/09/23 22:22:21 http: superfluous response.WriteHeader call from go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp.(*respWriterWrapper).WriteHeader (wrap.go:98)
+Sep 23 22:22:21 ip-172-31-95-72 docker[2203]: 2026/09/23 22:22:21 http2: server: error reading preface from client @: read unix /run/docker.sock->@: read: connection reset by peer
+
+
+----------------------------------------
+/var/log/eb-docker/containers/eb-current-app/eb-cbbc57d5a782-stdouterr.log
+----------------------------------------
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+
+
+  You can now view your Streamlit app in your browser.
+
+  URL: http://0.0.0.0:8080
+
+
+
+----------------------------------------
+/var/log/eb-engine.log
+----------------------------------------
+units). This means they are not meant to be enabled using systemctl.
+ 
+Possible reasons for having this kind of units are:
+• A unit may be statically enabled by being symlinked from another unit's
+  .wants/ or .requires/ directory.
+• A unit's purpose may be to act as a helper for some other unit which has
+  a requirement dependency on it.
+• A unit may be started when needed via activation (socket, path, timer,
+  D-Bus, udev, scripted systemctl call, ...).
+• In case of template units, the unit is meant to be enabled with some
+  instance name specified.
+
+2026/09/23 22:22:20.573965 [INFO] Running command: systemctl show -p PartOf eb-docker.service
+2026/09/23 22:22:20.582063 [INFO] Running command: systemctl is-active eb-docker.service
+2026/09/23 22:22:20.587012 [INFO] Running command: systemctl start eb-docker.service
+2026/09/23 22:22:20.731293 [INFO] Running command: systemctl show -p PartOf eb-docker-log.service
+2026/09/23 22:22:20.742130 [INFO] Running command: systemctl daemon-reload
+2026/09/23 22:22:20.888181 [INFO] Running command: systemctl reset-failed
+2026/09/23 22:22:20.894600 [INFO] Running command: systemctl enable eb-docker-log.service
+2026/09/23 22:22:21.065085 [INFO] Created symlink /etc/systemd/system/eb-docker.service.wants/eb-docker-log.service → /etc/systemd/system/eb-docker-log.service.
+
+2026/09/23 22:22:21.065105 [INFO] Running command: systemctl show -p PartOf eb-docker-log.service
+2026/09/23 22:22:21.071757 [INFO] Running command: systemctl is-active eb-docker-log.service
+2026/09/23 22:22:21.076261 [INFO] Running command: systemctl start eb-docker-log.service
+2026/09/23 22:22:21.197664 [INFO] Running command: docker logs --since 2026-09-23T22:22:14Z cbbc57d5a782 2>&1
+2026/09/23 22:22:21.208176 [INFO] 
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+
+
+  You can now view your Streamlit app in your browser.
+
+  URL: http://0.0.0.0:8080
+
+
+2026/09/23 22:22:21.208204 [INFO] docker container cbbc57d5a782 is running aws_beanstalk/current-app
+2026/09/23 22:22:21.208207 [INFO] Cleanup images ...
+2026/09/23 22:22:21.208213 [INFO] Running command: docker images -a
+2026/09/23 22:22:21.218724 [INFO] REPOSITORY                  TAG         IMAGE ID       CREATED         SIZE
+aws_beanstalk/current-app   latest      737adad82b30   5 minutes ago   1.57GB
+python                      3.11-slim   274d131132db   4 days ago      125MB
+
+2026/09/23 22:22:21.218743 [INFO] Running command: docker rmi `docker images -aq`
+2026/09/23 22:22:21.240978 [INFO] Untagged: python:3.11-slim
+Untagged: python@sha256:da047cb8f9d1d98e5c070f5300ba9f7274e33b8fc0e5be5ed88740aed1b95ba9
+Deleted: sha256:274d131132dbdc6058ed77088525d77adaf0749a6d99f2cf7d42feb9a10737c8
+
+2026/09/23 22:22:21.241000 [INFO] Error response from daemon: conflict: unable to delete 737adad82b30 (cannot be forced) - image is being used by running container cbbc57d5a782
+
+2026/09/23 22:22:21.241006 [INFO] Running command: docker images -a
+2026/09/23 22:22:21.250299 [INFO] REPOSITORY                  TAG       IMAGE ID       CREATED         SIZE
+aws_beanstalk/current-app   latest    737adad82b30   5 minutes ago   1.57GB
+
+2026/09/23 22:22:21.250307 [INFO] Pruning build cache ...
+2026/09/23 22:22:21.250314 [INFO] Running command: docker builder prune -f
+2026/09/23 22:22:21.335307 [INFO] ID						RECLAIMABLE	SIZE		LAST ACCESSED
+kf6fbvlmx78cnkw0t23owi4gm*              	true 		111.9MB   	22 seconds ago
+3hqx6k29ribai9aff7z7au7m6*              	true 	691B      	22 seconds ago
+mr09egr7og7i0chan4whpxjvn*              	true 	0B        	22 seconds ago
+Total:	111.9MB
+
+2026/09/23 22:22:21.335328 [INFO] Executing instruction: start X-Ray
+2026/09/23 22:22:21.335333 [INFO] X-Ray is not enabled.
+2026/09/23 22:22:21.335338 [INFO] Executing instruction: configureSqsd
+2026/09/23 22:22:21.335341 [INFO] This is a web server environment instance, skip configure sqsd daemon ...
+2026/09/23 22:22:21.335344 [INFO] Executing instruction: startSqsd
+2026/09/23 22:22:21.335346 [INFO] This is a web server environment instance, skip start sqsd daemon ...
+2026/09/23 22:22:21.335348 [INFO] Executing instruction: Track pids in healthd
+2026/09/23 22:22:21.335351 [INFO] This is an enhanced health env...
+2026/09/23 22:22:21.335361 [INFO] Running command: systemctl show -p ConsistsOf aws-eb.target | cut -d= -f2
+2026/09/23 22:22:21.342110 [INFO] amazon-cloudwatch-agent.service eb-docker-events.service cfn-hup.service docker.service nginx.service eb-docker.service eb-docker-log.service healthd.service
+
+2026/09/23 22:22:21.342131 [INFO] Running command: systemctl show -p ConsistsOf eb-app.target | cut -d= -f2
+2026/09/23 22:22:21.347610 [INFO] 
+
+2026/09/23 22:22:21.347802 [INFO] Executing instruction: RunAppDeployPostDeployHooks
+2026/09/23 22:22:21.347809 [INFO] No hooks found in .platform/hooks/postdeploy/, skipping
+2026/09/23 22:22:21.347811 [INFO] Executing cleanup logic
+2026/09/23 22:22:21.347916 [INFO] CommandService Response: {"status":"SUCCESS","api_version":"1.0","results":[{"status":"SUCCESS","msg":"Engine execution has succeeded.","returncode":0,"events":[{"msg":"Instance deployment completed successfully.","timestamp":1790202141347,"severity":"INFO"}]}]}
+
+2026/09/23 22:22:21.386432 [INFO] Platform Engine finished execution on command: app-deploy
+
+2026/09/23 22:24:47.467590 [INFO] Starting...
+2026/09/23 22:24:47.467625 [INFO] Starting EBPlatform-PlatformEngine
+2026/09/23 22:24:47.467639 [INFO] reading event message file
+2026/09/23 22:24:47.467973 [INFO] Engine received EB command cfn-hup-exec
+
+2026/09/23 22:24:47.536742 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-1:682033467946:stack/awseb-e-rqms9bmxmn-stack/7a349920-de76-11f0-8e6b-0affffaf7789 -r AWSEBAutoScalingGroup --region us-east-1
+2026/09/23 22:24:47.671104 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-1:682033467946:stack/awseb-e-rqms9bmxmn-stack/7a349920-de76-11f0-8e6b-0affffaf7789 -r AWSEBBeanstalkMetadata --region us-east-1
+2026/09/23 22:24:47.812809 [INFO] checking whether command tail-log is applicable to this instance...
+2026/09/23 22:24:47.812820 [INFO] this command is applicable to the instance, thus instance should execute command
+2026/09/23 22:24:47.812826 [INFO] Engine command: (tail-log)
+
+2026/09/23 22:24:47.812852 [INFO] Executing instruction: GetTailLogs
+2026/09/23 22:24:47.812854 [INFO] Tail Logs...
+2026/09/23 22:24:47.813347 [INFO] Running command: tail -n 100 /var/log/nginx/error.log
+2026/09/23 22:24:47.814941 [INFO] Running command: tail -n 100 /var/log/docker-events.log
+2026/09/23 22:24:47.816263 [INFO] Running command: tail -n 100 /var/log/eb-docker-process.log
+2026/09/23 22:24:47.817447 [INFO] Running command: tail -n 100 /var/log/docker
+2026/09/23 22:24:47.818617 [INFO] Running command: tail -n 100 /var/log/eb-docker/containers/eb-current-app/eb-cbbc57d5a782-stdouterr.log
+2026/09/23 22:24:47.819774 [INFO] Running command: tail -n 100 /var/log/eb-engine.log
+
+
+----------------------------------------
+/var/log/nginx/access.log
+----------------------------------------
+172.31.46.64 - - [23/Sep/2026:22:12:08 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:12:15 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:12:23 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:12:30 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:12:38 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:12:45 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:12:53 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:13:00 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:13:08 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:13:15 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:13:23 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:13:30 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:13:38 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:13:45 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:13:53 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:14:00 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:14:08 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:14:15 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:14:23 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:14:30 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:14:38 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:14:45 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:14:53 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:15:00 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:15:08 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:15:15 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:15:23 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:15:30 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:15:38 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:15:45 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:15:53 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:16:00 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:16:08 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:16:15 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:16:23 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:16:30 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:16:38 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:16:45 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:16:53 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:17:00 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:17:30 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:17:38 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:17:45 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:17:53 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:18:00 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:18:08 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:18:15 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:18:23 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:18:30 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:18:38 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:18:45 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:18:53 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:19:00 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:19:08 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:19:15 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:19:23 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:19:30 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:19:38 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:19:45 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:19:53 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:20:00 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:20:08 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:20:15 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:20:19 +0000] "GET /druid/index.html HTTP/1.1" 200 477 "-" "Mozilla/5.0 zgrab/0.x" "20.65.202.202"
+172.31.46.64 - - [23/Sep/2026:22:20:23 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:20:30 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:20:38 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:20:40 +0000] "GET /druid/index.html HTTP/1.1" 200 477 "-" "Mozilla/5.0 zgrab/0.x" "40.124.84.10"
+172.31.80.91 - - [23/Sep/2026:22:20:45 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:20:53 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:21:00 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:21:08 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:21:15 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:21:23 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:21:30 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:21:38 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:21:42 +0000] "GET /api/getData?path=player%3Aplayer%2Fdata&roles=value HTTP/1.1" 200 891 "-" "-" "69.5.169.29"
+172.31.80.91 - - [23/Sep/2026:22:21:45 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:21:53 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:22:00 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:22:23 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:22:30 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:22:38 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:22:45 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:22:53 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:23:00 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:23:08 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:23:15 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:23:23 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:23:30 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:23:38 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:23:45 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:23:53 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:24:00 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:24:08 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:24:15 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:24:23 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:24:30 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.46.64 - - [23/Sep/2026:22:24:38 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+172.31.80.91 - - [23/Sep/2026:22:24:45 +0000] "GET / HTTP/1.1" 200 477 "-" "ELB-HealthChecker/2.0" "-"
+
+

@@ -1,0 +1,40 @@
+services:
+  orchestrator:
+    port: 8090
+    llm: bedrock
+    model_env: BEDROCK_MODEL_ID
+    state_store: postgres
+    tracing: phoenix
+
+  mcp_servers:
+    geospatial:
+      port: 8001
+      owns: [risk_mapping, urban_features, demographics, urban_heat]
+
+    calculators:
+      port: 8002
+      owns: [green_roof, rain_garden]
+
+    data:
+      port: 8003
+      owns: [s3_runtime_assets, approved_dataset_listing]
+
+    model:
+      port: 8004
+      owns: [model_metadata, model_reload]
+
+    forecasting:
+      port: 8012
+      owns: [forecast_heatmap, forecast_sensor_flood_snapshot]
+
+ui_routes:
+  - landing
+  - urban
+  - risk
+  - demographics
+  - forecast
+  - uhi
+  - query
+  - green_roof
+  - rain_garden
+  - chat

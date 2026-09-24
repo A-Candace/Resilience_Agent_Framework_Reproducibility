@@ -1,0 +1,20 @@
+{
+  "run_id": "2026-09-01__20260831T034741Z",
+  "status": "failed",
+  "target_date_utc": "2026-09-01",
+  "started_at": "2026-08-31T03:47:41.854792+00:00",
+  "expected_grid_cells": 837,
+  "expected_forecast_hours": 24,
+  "expected_rows": 20088,
+  "minimum_precision": 0.25,
+  "minimum_recall": 0.3,
+  "logistic_threshold": 0.5,
+  "gcn_duration_threshold_minutes": 1.0,
+  "training_precipitation_source": "MRMS",
+  "operational_precipitation_source": "HRRR",
+  "failed_at": "2026-08-31T03:48:20.147497+00:00",
+  "duration_seconds": 38.292705,
+  "error_type": "RuntimeError",
+  "error_message": "Precipitation artifact target date does not match requested target date. Expected=2026-09-01; observed=[datetime.date(2026, 8, 26)]",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\cagon\\OneDrive\\Desktop\\nyc-resilience-agent-owned-v2\\mlops\\flood\\forecasting\\run_daily_forecast.py\", line 760, in main\n    precipitation_validation = validate_precipitation_forecast(\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\cagon\\OneDrive\\Desktop\\nyc-resilience-agent-owned-v2\\mlops\\flood\\forecasting\\run_daily_forecast.py\", line 180, in validate_precipitation_forecast\n    raise RuntimeError(\nRuntimeError: Precipitation artifact target date does not match requested target date. Expected=2026-09-01; observed=[datetime.date(2026, 8, 26)]\n"
+}

@@ -1,0 +1,5 @@
+mode,support_sensor_model,rows,unique_grids,flood_grid_hours
+today,gcn,5952,248,95
+today,logistic,14136,589,228
+tomorrow,gcn,5952,248,426
+tomorrow,logistic,14136,589,5026

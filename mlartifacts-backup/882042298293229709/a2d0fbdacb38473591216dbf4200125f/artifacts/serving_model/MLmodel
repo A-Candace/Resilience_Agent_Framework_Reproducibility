@@ -1,0 +1,50 @@
+artifact_path: serving_model
+flavors:
+  python_function:
+    artifacts:
+      checkpoint:
+        path: artifacts\duration_response_gcn_precipitation_only.pt
+        uri: C:\Users\cagon\OneDrive\Desktop\nyc-resilience-agent-owned-v2\artifacts\flood\gcn\duration_response_gcn_precipitation_only.pt
+      node_table:
+        path: artifacts\node_table.parquet
+        uri: C:\Users\cagon\OneDrive\Desktop\nyc-resilience-agent-owned-v2\artifacts\flood\gcn\node_table.parquet
+      scalers:
+        path: artifacts\scalers.pkl
+        uri: C:\Users\cagon\OneDrive\Desktop\nyc-resilience-agent-owned-v2\artifacts\flood\gcn\scalers.pkl
+    cloudpickle_version: 3.1.2
+    code: null
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.pyfunc.model
+    python_model: python_model.pkl
+    python_version: 3.11.9
+    streamable: false
+metadata:
+  canonical_source_target: minutes_above_1p5_inch
+  features:
+  - precip_current_hour_mm
+  - precip_previous_6h_mm
+  - daily_total_precip_mm
+  scientific_threshold: 1 inch / 25.4 mm
+  serving_contract: one hourly sensor snapshot; one row per active known deployment_id
+  training_target: minutes_above_1inch
+mlflow_version: 2.17.0
+model_size_bytes: 59702
+model_uuid: a6d616331d9642ac898e81e680710933
+run_id: a2d0fbdacb38473591216dbf4200125f
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "string", "name": "deployment_id", "required": true}, {"type":
+    "double", "name": "precip_current_hour_mm", "required": true}, {"type": "double",
+    "name": "precip_previous_6h_mm", "required": true}, {"type": "double", "name":
+    "daily_total_precip_mm", "required": true}]'
+  outputs: '[{"type": "string", "name": "deployment_id", "required": true}, {"type":
+    "double", "name": "predicted_minutes_above_1inch", "required": true}, {"type":
+    "boolean", "name": "predicted_event", "required": true}]'
+  params: null
+utc_time_created: '2026-08-18 00:51:50.638942'

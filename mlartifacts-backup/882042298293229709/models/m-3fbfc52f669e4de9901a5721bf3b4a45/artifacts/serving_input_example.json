@@ -1,0 +1,30 @@
+{
+  "dataframe_split": {
+    "columns": [
+      "deployment_id",
+      "precip_current_hour_mm",
+      "precip_previous_6h_mm",
+      "daily_total_precip_mm"
+    ],
+    "data": [
+      [
+        "Abruptly-delayed-doormouse",
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        "Sadly-blue-beetle",
+        1.0,
+        2.0,
+        3.0
+      ],
+      [
+        "Wonderfully-adept-chihuahua",
+        5.0,
+        10.0,
+        15.0
+      ]
+    ]
+  }
+}

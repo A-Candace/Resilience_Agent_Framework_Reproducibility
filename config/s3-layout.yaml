@@ -1,0 +1,11 @@
+application: nyc-resilience
+prefixes:
+  data_current: nyc-resilience/data/current/
+  data_versions: nyc-resilience/data/versions/YYYY-MM-DD/
+  training: nyc-resilience/training/
+  models_candidate: nyc-resilience/models/candidates/<run-id>/
+  models_production: nyc-resilience/models/production/
+  deployment_bundles: nyc-resilience/deployments/
+production_model:
+  artifact: nyc-resilience/models/production/model.pkl
+  metadata: nyc-resilience/models/production/metadata.json

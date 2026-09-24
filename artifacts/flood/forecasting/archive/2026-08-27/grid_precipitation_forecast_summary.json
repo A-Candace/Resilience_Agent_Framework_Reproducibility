@@ -1,0 +1,36 @@
+{
+  "target_date_utc": "2026-08-27",
+  "target_start_utc": "2026-08-27T00:00:00+00:00",
+  "target_end_utc": "2026-08-27T23:00:00+00:00",
+  "context_start_utc": "2026-08-26T18:00:00+00:00",
+  "context_hours": 6,
+  "selected_hrrr_cycle": "20260826T12Z",
+  "hrrr_initialization_time": "2026-08-26T12:00:00+00:00",
+  "minimum_forecast_lead_hour": 6,
+  "maximum_forecast_lead_hour": 35,
+  "grid_cells": 837,
+  "target_forecast_hours": 24,
+  "target_rows": 20088,
+  "context_rows": 25110,
+  "unique_hrrr_points_used": 126,
+  "hrrr_distance_km": {
+    "mean": 1.1437006525412434,
+    "median": 1.1830610276818925,
+    "max": 2.093526927093433
+  },
+  "precip_current_hour_mm": {
+    "mean": 0.04585473917284364,
+    "max": 25.6200008392334,
+    "wet_rows": 2241
+  },
+  "model_features": [
+    "precip_current_hour_mm",
+    "precip_previous_6h_mm",
+    "daily_total_precip_mm"
+  ],
+  "daily_total_definition": "sum of hourly HRRR one-hour APCP across the complete UTC target calendar day",
+  "previous_6h_definition": "sum of six preceding hourly HRRR one-hour APCP values, excluding current hour",
+  "training_source": "MRMS observed precipitation",
+  "operational_forecast_source": "HRRR forecast precipitation",
+  "synthetic_grid_rows_used_for_retraining": false
+}

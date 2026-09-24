@@ -1,0 +1,22 @@
+{
+  "grid_cells_total": 837,
+  "grid_cells_direct_sensor": 75,
+  "grid_cells_imputed": 762,
+  "method_counts": {
+    "same_cluster_primary_sensor": 762,
+    "direct_grid_primary_sensor": 75
+  },
+  "grid_cells_by_cluster": {
+    "1": 65,
+    "2": 173,
+    "3": 271,
+    "4": 76,
+    "5": 252
+  },
+  "clusters_using_cross_cluster_fallback": [],
+  "support_sensor_count": 75,
+  "mean_imputed_support_distance_km": 19.951734367160853,
+  "median_imputed_support_distance_km": 19.03825681382515,
+  "max_imputed_support_distance_km": 48.70037820605987,
+  "selection_rule": "direct grid: highest selected F1 in grid; unsensored grid: highest selected F1 in same cluster; fallback: nearest eligible sensor across clusters"
+}

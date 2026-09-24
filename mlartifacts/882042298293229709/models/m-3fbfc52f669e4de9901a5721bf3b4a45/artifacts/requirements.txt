@@ -1,0 +1,6 @@
+mlflow==3.14.0
+numpy
+pandas
+pyarrow
+torch
+scikit-learn==1.8.0

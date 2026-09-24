@@ -1,0 +1,25 @@
+{
+  "cycle_id": "20260829T194413Z",
+  "data_contract": {
+    "forward_canonical": "append-only",
+    "historical_canonical": "immutable",
+    "operational_imputed_grids_added_to_training": false,
+    "operational_model_identity": "support sensor",
+    "operational_rainfall": "target-grid-local",
+    "training_observations": "real physical FloodNet sensors"
+  },
+  "finished_at_utc": "2026-08-29T19:44:13.920220+00:00",
+  "git": {
+    "branch": "feature/flood-mlflow-pipeline",
+    "commit": "022f9967a1cd1426ef7202aa95b2c02596555283",
+    "status_porcelain": "M agentic/orchestrator/bedrock.py\n M agentic/orchestrator/service.py\n M docker-compose.yml\n M src/resilience_app/agents/forecasting_agent/mcp_server.py\n M src/resilience_app/agents/forecasting_agent/page.py\n M src/resilience_app/agents/forecasting_agent/service.py\n M src/resilience_app/agents/forecasting_agent/tools.py\n?? data/processed/\n?? data/raw/\n?? mlops/flood/experiments/\n?? mlops/flood/forecasting/\n?? mlops/flood/pipeline/\n?? mlops/flood/spatial/\n?? mlops/flood/training/select_sensor_models_mlflow.py\n?? mlops/flood/training/train_logistic_mlflow.py"
+  },
+  "mlflow_tracking_uri": "http://localhost:5000",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "python_executable": "C:\\Users\\cagon\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+  "run_directory": "artifacts\\flood\\retraining\\20260829T194413Z",
+  "stages": [],
+  "started_at_utc": "2026-08-29T19:44:13.753373+00:00",
+  "status": "dry_run_complete",
+  "working_directory": "C:\\Users\\cagon\\OneDrive\\Desktop\\nyc-resilience-agent-owned-v2"
+}

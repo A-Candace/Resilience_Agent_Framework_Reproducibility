@@ -1,0 +1,3 @@
+mode,rows,grid_cells,forecast_hours,duplicate_grid_hours,nyc_target_dates,first_hour_utc,last_hour_utc,first_hour_nyc,last_hour_nyc,flood_grid_hours,flood_grids
+today,20088,837,24,0,2026-08-27,2026-08-27 04:00:00+00:00,2026-08-28 03:00:00+00:00,2026-08-27 00:00:00-04:00,2026-08-27 23:00:00-04:00,323,63
+tomorrow,20088,837,24,0,2026-08-28,2026-08-28 04:00:00+00:00,2026-08-29 03:00:00+00:00,2026-08-28 00:00:00-04:00,2026-08-28 23:00:00-04:00,5452,708

@@ -1,0 +1,174 @@
+services:
+  app:
+    build: .
+    image: nyc-resilience:local
+    env_file: .env
+    ports:
+      - "8080:8080"
+    volumes:
+      - model-cache:/app/model_cache
+      - ./artifacts/flood/forecasting:/app/artifacts/flood/forecasting
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+
+  orchestrator:
+    image: nyc-resilience:local
+    command: uvicorn agentic.orchestrator.api:app --host 0.0.0.0 --port 8090
+    env_file: .env
+    ports:
+      - "8090:8090"
+    volumes:
+      - ./artifacts/flood/forecasting:/app/artifacts/flood/forecasting
+    depends_on:
+      postgres:
+        condition: service_healthy
+      phoenix:
+        condition: service_started
+      mlflow:
+        condition: service_healthy
+      mcp-geospatial:
+        condition: service_started
+      mcp-calculators:
+        condition: service_started
+      mcp-data:
+        condition: service_started
+      mcp-model:
+        condition: service_started
+      mcp-forecasting:
+        condition: service_started
+    restart: unless-stopped
+
+  mlflow:
+    image: nyc-resilience:local
+    command:
+      - mlflow
+      - server
+      - --backend-store-uri
+      - sqlite:////mlflow/db/mlflow.db
+      - --host
+      - 0.0.0.0
+      - --port
+      - "5000"
+      - --artifacts-destination
+      - /mlflow/artifacts
+      - --allowed-hosts
+      - localhost:*,127.0.0.1:*,mlflow:5000
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./mlflow-data:/mlflow/db
+      - ./mlartifacts:/mlflow/artifacts
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "curl",
+          "-f",
+          "http://localhost:5000/health"
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 10s
+    restart: unless-stopped
+
+  mcp-geospatial:
+    image: nyc-resilience:local
+    command: python -m agentic.mcp_servers.geospatial
+    env_file: .env
+    expose:
+      - "8001"
+    ports:
+      - "8001:8001"
+    restart: unless-stopped
+
+  mcp-calculators:
+    image: nyc-resilience:local
+    command: python -m agentic.mcp_servers.calculators
+    env_file: .env
+    expose:
+      - "8002"
+    ports:
+      - "8002:8002"
+    restart: unless-stopped
+
+  mcp-data:
+    image: nyc-resilience:local
+    command: python -m agentic.mcp_servers.data_access
+    env_file: .env
+    expose:
+      - "8003"
+    ports:
+      - "8003:8003"
+    restart: unless-stopped
+
+  mcp-model:
+    image: nyc-resilience:local
+    command: python -m agentic.mcp_servers.model_ops
+    env_file: .env
+    environment:
+      MLFLOW_TRACKING_URI: http://mlflow:5000
+    volumes:
+      - model-cache:/app/model_cache
+    expose:
+      - "8004"
+    ports:
+      - "8004:8004"
+    depends_on:
+      mlflow:
+        condition: service_healthy
+    restart: unless-stopped
+
+  mcp-forecasting:
+    image: nyc-resilience:local
+    command: python -m resilience_app.agents.forecasting_agent.mcp_server
+    env_file: .env
+    environment:
+      MLFLOW_TRACKING_URI: http://mlflow:5000
+    expose:
+      - "8012"
+    ports:
+      - "8012:8012"
+    volumes:
+      - ./artifacts/flood/forecasting:/app/artifacts/flood/forecasting
+    depends_on:
+      mlflow:
+        condition: service_healthy
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:16-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-resilience}
+      POSTGRES_USER: ${POSTGRES_USER:-resilience}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-resilience}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "pg_isready -U ${POSTGRES_USER:-resilience} -d ${POSTGRES_DB:-resilience}"
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  phoenix:
+    image: arizephoenix/phoenix:latest
+    ports:
+      - "6006:6006"
+      - "4317:4317"
+    volumes:
+      - phoenix-data:/mnt/data
+    restart: unless-stopped
+
+volumes:
+  model-cache:
+  postgres-data:
+  phoenix-data:

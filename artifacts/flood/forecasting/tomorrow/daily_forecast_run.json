@@ -1,0 +1,71 @@
+{
+  "run_id": "2026-08-31__20260831T170551Z__tomorrow",
+  "parent_run_id": "2026-08-31__20260831T170551Z",
+  "mode": "tomorrow",
+  "status": "success",
+  "target_date_nyc": "2026-09-01",
+  "target_timezone": "America/New_York",
+  "started_at": "2026-08-31T17:06:45.415756+00:00",
+  "expected_grid_cells": 837,
+  "maximum_forecast_hours": 24,
+  "minimum_precision": 0.25,
+  "minimum_recall": 0.3,
+  "logistic_threshold": 0.5,
+  "gcn_duration_threshold_minutes": 1.0,
+  "training_precipitation_source": "MRMS",
+  "operational_precipitation_source": "HRRR",
+  "weather_output_dir": "data\\processed\\forecasting\\tomorrow",
+  "artifact_output_dir": "artifacts\\flood\\forecasting\\tomorrow",
+  "precipitation": {
+    "precipitation_rows": 18414,
+    "precipitation_grid_cells": 837,
+    "precipitation_forecast_hours": 22,
+    "precipitation_duplicate_rows": 0,
+    "forecast_horizon_truncated": true,
+    "hrrr_cycle_count": 1,
+    "hrrr_cycle_ids": [
+      "20260831T12Z"
+    ],
+    "hrrr_distance_mean_km": 1.1437006525411906,
+    "hrrr_distance_max_km": 2.0935269270883037,
+    "maximum_current_hour_precip_mm": 12.321000099182129,
+    "maximum_previous_6h_precip_mm": 14.995000023394823,
+    "maximum_daily_total_precip_mm": 29.183999907108955,
+    "forecast_start_utc": "2026-09-01 04:00:00+00:00",
+    "forecast_end_utc": "2026-09-02 01:00:00+00:00"
+  },
+  "forecast_inputs": {
+    "forecast_input_rows": 18414,
+    "forecast_input_grid_cells": 837,
+    "forecast_input_hours": 22,
+    "forecast_input_duplicate_rows": 0,
+    "unique_support_sensors": 93,
+    "logistic_rows": 12958,
+    "gcn_rows": 5456,
+    "direct_grid_rows": 2046,
+    "imputed_grid_rows": 16368,
+    "minimum_support_precision": 0.25,
+    "minimum_support_recall": 0.30357142857142855
+  },
+  "final_forecast": {
+    "final_rows": 18414,
+    "final_grid_cells": 837,
+    "final_forecast_hours": 22,
+    "final_duplicate_grid_hour_rows": 0,
+    "predicted_flood_rows": 7141,
+    "predicted_flood_grids": 654,
+    "logistic_probability_min": 0.3593860107038542,
+    "logistic_probability_max": 0.8965697282964326,
+    "gcn_predicted_minutes_min": 0.1755935698747635,
+    "gcn_predicted_minutes_max": 2.0531866550445557,
+    "hrrr_cycle_count": 1,
+    "hrrr_cycle_ids": [
+      "20260831T12Z"
+    ],
+    "forecast_start_utc": "2026-09-01 04:00:00+00:00",
+    "forecast_end_utc": "2026-09-02 01:00:00+00:00"
+  },
+  "completed_at": "2026-08-31T17:07:33.552640+00:00",
+  "duration_seconds": 48.160716,
+  "archive_dir": "artifacts\\flood\\forecasting\\archive\\2026-09-01\\tomorrow"
+}

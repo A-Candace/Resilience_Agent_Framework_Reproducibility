@@ -1,0 +1,11 @@
+deployment_id,model,variant,precision,recall,f1,n_rows,actual_events,predicted_events
+eagerly_militant_sloth,gcn,static,0.9411764705882353,1.0,0.9696969696969697,,,
+visually-endless-martin,gcn,static,0.93,1.0,0.9637305699481865,,,
+apparently-darling-gecko,gcn,static,0.9891891891891892,0.906832298136646,0.9462220884316399,,,
+quarrelsomely_vacuous_starfish,gcn,static,0.65625,1.0,0.7924528301886793,,,
+eagerly_militant_sloth,gcn,rolling24,0.9444444444444444,1.0,0.9714285714285714,,,
+visually-endless-martin,gcn,rolling24,0.9270833333333334,1.0,0.9621621621621621,,,
+apparently-darling-gecko,gcn,rolling24,0.9834254143646409,0.8944099378881988,0.9368078652096049,,,
+quarrelsomely_vacuous_starfish,gcn,rolling24,0.6666666666666666,1.0,0.8,,,
+happily-green-lion,logistic,static,0.2768361581920904,0.4016393442622951,0.3277591973244147,1468.0,122.0,177.0
+happily-green-lion,logistic,rolling24,0.28272251308900526,0.4426229508196721,0.3450479233226837,1468.0,122.0,191.0

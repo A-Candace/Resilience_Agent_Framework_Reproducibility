@@ -1,0 +1,43 @@
+{
+  "contract": {
+    "model_identity": "support sensor",
+    "rainfall": "target grid rainfall",
+    "training_usage": "operational imputed-grid records are not synthetic retraining observations"
+  },
+  "eligible_model_registry": "artifacts\\flood\\model_selection\\eligible_sensor_model_registry.csv",
+  "metrics": {
+    "cross_cluster_support_grid_count": 0.0,
+    "direct_grid_count": 75.0,
+    "direct_grid_fraction": 0.08960573476702509,
+    "duplicate_grid_id_count": 0.0,
+    "eligible_sensor_in_grid_count": 75.0,
+    "gcn_supported_grid_count": 248.0,
+    "grid_weighted_support_f1_mean": 0.7758419623292867,
+    "grid_weighted_support_precision_mean": 0.8147853070714083,
+    "grid_weighted_support_recall_mean": 0.7552042554978958,
+    "imputation_method_same_cluster_primary_sensor_count": 762.0,
+    "imputed_grid_count": 762.0,
+    "imputed_grid_fraction": 0.910394265232975,
+    "logistic_supported_grid_count": 589.0,
+    "missing_support_model_count": 0.0,
+    "missing_support_sensor_count": 0.0,
+    "model_assignment_mismatch_count": 0.0,
+    "operational_grid_count": 837.0,
+    "operational_support_gcn_count": 37.0,
+    "operational_support_logistic_count": 38.0,
+    "operational_support_sensor_count": 75.0,
+    "operational_support_sensor_f1_mean": 0.5093173112487649,
+    "operational_support_sensor_precision_mean": 0.4812931635071292,
+    "operational_support_sensor_recall_mean": 0.5971863040951181,
+    "same_cluster_support_grid_count": 837.0,
+    "spatial_reference_row_count": 837.0,
+    "support_distance_km_max": 48.70037820605987,
+    "support_distance_km_mean": 18.199362150981997,
+    "support_distance_km_median": 17.37422853609441,
+    "support_distance_km_p95": 38.18890800855257,
+    "support_scope_cluster_grid_count": 762.0,
+    "support_scope_grid_grid_count": 75.0,
+    "support_sensor_not_in_registry_count": 0.0
+  },
+  "spatial_reference": "artifacts\\flood\\spatial\\grid_imputation_reference.parquet"
+}

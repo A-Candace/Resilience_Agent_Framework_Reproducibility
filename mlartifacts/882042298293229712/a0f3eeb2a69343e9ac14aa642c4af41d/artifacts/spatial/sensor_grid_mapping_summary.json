@@ -1,0 +1,26 @@
+{
+  "eligible_sensor_count": 109,
+  "total_grid_cells": 837,
+  "grid_cells_with_eligible_sensor": 87,
+  "grid_cells_without_eligible_sensor": 750,
+  "grid_cells_with_multiple_eligible_sensors": 14,
+  "clusters_present": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "eligible_sensors_by_cluster": {
+    "1": 7,
+    "2": 38,
+    "3": 38,
+    "4": 3,
+    "5": 23
+  },
+  "assignment_methods": {
+    "point_in_polygon": 105,
+    "nearest_grid_centroid_fallback": 4
+  },
+  "selection_rule": "highest selected_f1; tie-break selected_recall, selected_precision, deployment_id"
+}

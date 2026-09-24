@@ -1,0 +1,17 @@
+{
+  "experiment": "static_vs_centered_rolling24",
+  "rolling_definition": "sum precip_current_hour_mm from H-12 through H+11",
+  "rolling_hours": 24,
+  "train_end_hour": "2024-11-21 05:00:00+00:00",
+  "validation_end_hour": "2025-09-30 14:00:00+00:00",
+  "matched_rows": 4434010,
+  "matched_sensors": 447,
+  "selected_evaluation_sensors": [
+    "visually-endless-martin",
+    "apparently-darling-gecko",
+    "eagerly_militant_sloth",
+    "happily-green-lion",
+    "quarrelsomely_vacuous_starfish"
+  ],
+  "production_modified": false
+}

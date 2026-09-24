@@ -1,0 +1,26 @@
+{
+  "generated_at": "2026-09-01T05:01:48.801025+00:00",
+  "forecast_mode": "tomorrow",
+  "target_date_nyc": "2026-09-02",
+  "rows": 17577,
+  "grid_cells": 837,
+  "forecast_hours": 21,
+  "support_sensors": 93,
+  "logistic_rows": 12369,
+  "gcn_rows": 5208,
+  "predicted_flood_rows": 13156,
+  "logistic_predicted_flood_rows": 12116,
+  "gcn_predicted_flood_rows": 1040,
+  "logistic_threshold": 0.5,
+  "gcn_duration_threshold_minutes": 1.0,
+  "gcn_model_uri": "models:/nyc-resilience-flood-gcn@champion",
+  "mlflow_tracking_uri": "http://localhost:5000",
+  "logistic_model_path": "artifacts\\flood\\logistic\\precipitation_only_logistic.pkl",
+  "logistic_features": [
+    "precip_current_hour_mm",
+    "precip_previous_6h_mm",
+    "daily_total_precip_mm"
+  ],
+  "forecast_start": "2026-09-02T04:00:00+00:00",
+  "forecast_end": "2026-09-03T00:00:00+00:00"
+}

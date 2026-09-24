@@ -1,0 +1,5 @@
+metric,value
+pooled_r2,-0.010325046634052537
+rmse_minutes,8.135263109963674
+mae_minutes,1.4659190715273491
+test_node_hours,2014559.0

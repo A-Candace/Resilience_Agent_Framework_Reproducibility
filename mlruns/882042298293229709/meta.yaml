@@ -1,0 +1,6 @@
+artifact_location: mlflow-artifacts:/882042298293229709
+creation_time: 1786923370833
+experiment_id: '882042298293229709'
+last_update_time: 1786923370833
+lifecycle_stage: active
+name: nyc-resilience-flood-gcn

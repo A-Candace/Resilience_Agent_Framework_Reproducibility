@@ -1,0 +1,60 @@
+{
+  "forecast_mode": "tomorrow",
+  "target_timezone": "America/New_York",
+  "target_date_nyc": "2026-09-02",
+  "target_start_nyc": "2026-09-02T00:00:00-04:00",
+  "target_end_nyc": "2026-09-02T20:00:00-04:00",
+  "target_start_utc": "2026-09-02T04:00:00+00:00",
+  "target_end_utc": "2026-09-03T00:00:00+00:00",
+  "context_start_utc": "2026-09-01T05:00:00+00:00",
+  "retrieval_end_utc": "2026-09-03T00:00:00+00:00",
+  "previous_6h_hours": 6,
+  "rolling_24h_past_hours": 23,
+  "rolling_24h_future_hours": 0,
+  "target_hour_count": 21,
+  "requested_target_hour_count": 24,
+  "published_target_hour_count": 21,
+  "forecast_horizon_truncated": true,
+  "first_missing_context_time_utc": "2026-09-03T01:00:00+00:00",
+  "available_through_nyc": "2026-09-02T20:00:00-04:00",
+  "hrrr_retrieval_strategy": "latest available extended HRRR cycle per valid time",
+  "hrrr_cycles_used": [
+    "20260901T00Z"
+  ],
+  "hrrr_cycle_count": 1,
+  "minimum_forecast_lead_hour": 5,
+  "maximum_forecast_lead_hour": 48,
+  "grid_cells": 837,
+  "target_forecast_hours": 21,
+  "target_rows": 17577,
+  "context_rows": 36828,
+  "unique_hrrr_points_used": 126,
+  "hrrr_distance_km": {
+    "mean": 1.1437006525411906,
+    "median": 1.1830610276841371,
+    "max": 2.0935269270883037
+  },
+  "precip_current_hour_mm": {
+    "mean": 0.08925982798869497,
+    "max": 3.569000005722046,
+    "wet_rows": 12021
+  },
+  "daily_total_precip_mm": {
+    "mean": 25.790073515812097,
+    "max": 49.67299906909466
+  },
+  "model_features": [
+    "precip_current_hour_mm",
+    "precip_previous_6h_mm",
+    "daily_total_precip_mm"
+  ],
+  "daily_total_definition": "operational centered rolling 24-hour HRRR precipitation context from H-12 through H+11; legacy column name daily_total_precip_mm retained for downstream model compatibility",
+  "previous_6h_definition": "sum of six preceding hourly HRRR one-hour APCP values, excluding current hour",
+  "training_source": "MRMS observed precipitation",
+  "operational_forecast_source": "HRRR forecast precipitation",
+  "hrrr_native_resolution_km": 3.0,
+  "operational_prediction_grid_km": 1.0,
+  "hrrr_spatial_assignment": "nearest HRRR forecast point to each target NYC 1-km grid",
+  "hrrr_interpolated_to_1km": false,
+  "synthetic_grid_rows_used_for_retraining": false
+}
